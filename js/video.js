@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
 
 document.querySelector('#play').addEventListener('click', () => {
 	video.play();
-	document.querySelector('#volume').textContent = `${e.target.value}%`;
+	document.querySelector('#volume').textContent = `${video.volume}%`;
 })
 
 document.querySelector('#pause').addEventListener('click', () => {
@@ -25,7 +25,7 @@ document.querySelector('#faster').addEventListener('click', () => {
 })
 
 document.querySelector('#skip').addEventListener('click', () => {
-	console.log(currentTime);
+	console.log(video.currentTime);
 	if (video.duration - video.currentTime <= 10){
 		video.pause();
 		video.currentTime = 0;
